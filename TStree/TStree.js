@@ -30,47 +30,50 @@
             jobs[teacher] = item[0];
             names.push(teacher);//保留导师的姓名以便使用
             Manage_Text(line_str,teacher);//处理学生数据
+            Creat_Tree();
         }
+    }
+    function Creat_Tree(){
         Get_Root();
-		var  myChart = echarts.init(document.getElementById("container"))
-			myChart.setOption(option = {
-        		tooltip: {
-            	trigger: 'item',
-           		triggerOn: 'mousemove'
-        		},
-        		series: [
-	            	{
-	                type: 'tree',
-	                data: [tree_data],
-	                top: '1%',
-	                left: '7%',
-	                bottom: '1%',
-	                right: '20%',
-	                symbolSize: 7,
-	                label: {
-	                    normal: {
-	                        position: 'left',
-	                        verticalAlign: 'middle',
-	                        align: 'right',
-	                        fontSize: 9
-	                    }
-	                },
-	                leaves: {
-	                    label: {
-	                        normal: {
-	                            position: 'right',
-	                            verticalAlign: 'middle',
-	                            align: 'left'
-	                        }
-	                    }
-	                },
+        var  myChart = echarts.init(document.getElementById("container"))
+            myChart.setOption(option = {
+                tooltip: {
+                trigger: 'item',
+                triggerOn: 'mousemove'
+                },
+                series: [
+                    {
+                    type: 'tree',
+                    data: [tree_data],
+                    top: '1%',
+                    left: '7%',
+                    bottom: '1%',
+                    right: '20%',
+                    symbolSize: 7,
+                    label: {
+                        normal: {
+                            position: 'left',
+                            verticalAlign: 'middle',
+                            align: 'right',
+                            fontSize: 9
+                        }
+                    },
+                    leaves: {
+                        label: {
+                            normal: {
+                                position: 'right',
+                                verticalAlign: 'middle',
+                                align: 'left'
+                            }
+                        }
+                    },
                     initialTreeDepth: 10,
-	                expandAndCollapse: true,
-	                animationDuration: 550,
-	                animationDurationUpdate: 750
-	            	}
-	        		]
-    		});
+                    expandAndCollapse: true,
+                    animationDuration: 550,
+                    animationDurationUpdate: 750
+                    }
+                    ]
+            });
     }
     function Manage_Text(line_str,teacher)
     {
@@ -109,11 +112,11 @@
             else
             {
                 /*处理技能*/
-                var item1 = line_str[i].split(':');//姓名与技能分开
                 for(var val1 of sname)
                 {
                     if(item1[0].indexOf(val1) != -1)
                     {
+                        var item1 = line_str[i].split(':');//姓名与技能分开
                         var skill_str = item1[0]+val1;
                         next_node[val1].push(skill_str);
                         jobs[skill_str] = val1;
