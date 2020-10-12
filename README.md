@@ -1,6 +1,7 @@
-# Tstree（目录说明）
--  js：存放主函数
-- Tstree.html：html文件
+# Tstree(目录说明）
+- css:样式文件
+- js：需要应用的js文件
+- Tstree：html文件
 # 使用说明
-- 下载Tstree.zip,解压
-- 点击Tstree.html文件，在谷歌浏览器上查看
+- TStree.html为网页运行的文件，其余均为所要引用的js文件和css文件
+- 下载全部文件后直接运行TStree.html文件，在谷歌浏览器上查看
