@@ -1,19 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>TStree</title>
+	<title>ㄟ(≧◇≦)ㄏ 俺来整棵树！ </title>
 	<script src="echarts.min.js"></script>
     <script src="jquery-3.4.1.min.js"></script>
     <script src="TStree.js"></script>
 	<link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.css" rel="stylesheet">
+	<style>
+		body
+		{
+			height: 100%;
+			width: 100%;
+			background:url('pexels-wouter-de-jong-571169.jpg') no-repeat;
+			background-size: cover;
+			position: absolute;
+			overflow: hidden;
+		}
+		.d1
+		{
+			position: absolute;
+			left: 0;
+			right: 0;
+			top:0;
+			bottom: 0;
+			width: 100%;   
+			height: 100%;
+			line-height: 50px;
+			text-align: center;
+			background: rgba(225,225,225,0.5);          
+		}
+	</style>
 </head>
 <body>
-	<div id="container" style="width: 1600px;height:700px;"></div>
+	<div class="d1"></div>
+	<div class="input-group" style="position:absolute;left:0;left:0;width: 320px;height:100%;display:flex;justify-content:center;">
+		<textarea  style="border:0;border-radius:5px;background-color:rgba(241,241,241,.98);float:left;position:absolute;left:10px;top:10px;height:500px;width: 300px;" class="form-control" placeholder="请输入师生信息..." id="inputs"></textarea>
+		<span class="input-group-btn " style="position: absolute;left:auto;top:515px"><button class="btn btn-primary" onclick="Build_Tree()">确定</button></span>
+	</div>
+	<div id="container" style="position:absolute;top:0px;left:320px;width: 1200px;height: 100%"></div>
 </body>
-	<div class="input-group" style="width: 100%;height:100%;display:flex;justify-content:center;">
-        <textarea  style="height:300px;width: 500px;" class="form-control" placeholder="请输入师生信息..." id="inputs"></textarea>
-    </div>
-    <span class="input-group-btn "><button class="btn btn-primary" onclick="Build_Tree()">确定</button></span>
 	<script type="text/javascript">
 	</script>
 </html>
